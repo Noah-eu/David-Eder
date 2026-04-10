@@ -51,9 +51,8 @@ export const siteData = {
   help: {
     id: 's-cim-pomaham',
     title: 'S čím pomáhám',
-    introLead:
-      'Konkrétní oblasti, kde malý provoz nejvíc ztrácí čas. Tam se typicky ',
-    introHighlight: 'dá rozumně ušetřit energii i peníze.',
+    intro:
+      'Konkrétní oblasti, kde malý provoz nejvíc ztrácí čas. Tam se typicky dá rozumně ušetřit energii i peníze.',
     cards: [
       {
         title: 'Automatizace provozu',

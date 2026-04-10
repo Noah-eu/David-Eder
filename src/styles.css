@@ -431,15 +431,15 @@ a:hover {
   color: var(--accent);
 }
 
-/* S čím pomáhám — zvýraznění části úvodu kvůli čitelnosti u přesahu hero kruhu */
+/* S čím pomáhám — celý úvod světlý kvůli čitelnosti u přesahu hero kruhu */
 .help-section {
   position: relative;
   z-index: 1;
 }
 
-.help-section__intro-highlight {
+.help-section__intro {
   color: #f8fafc;
-  font-weight: 600;
+  font-weight: 500;
   text-shadow: 0 0 24px rgba(12, 16, 23, 0.85), 0 1px 3px rgba(12, 16, 23, 0.95);
 }
 
