@@ -191,7 +191,7 @@ export const siteData = {
   contact: {
     id: 'kontakt',
     email: 'david.eder78@gmail.com',
-    phone: '+420 733 439 733',
+    phone: '+420 705 940 697',
     title: 'Kontakt',
     headline: 'Chcete zjednodušit provoz vašeho ubytování?',
     body:
