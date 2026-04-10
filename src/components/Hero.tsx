@@ -10,11 +10,10 @@ export function Hero() {
     <section className="section hero" id={hero.id} aria-labelledby="hero-heading">
       <div className="section__inner">
         <div className="hero__grid">
-          <div>
+          <div className="hero__copy">
+            <p className="hero__strip">{hero.automationStrip}</p>
             <h1 id="hero-heading">{hero.headline}</h1>
-            <p className="section__intro" style={{ marginBottom: '1rem' }}>
-              {hero.subheadline}
-            </p>
+            <p className="section__intro hero__sub">{hero.subheadline}</p>
             <p className="hero__trust">{hero.trustLine}</p>
             <div className="hero__actions">
               <a className="btn btn--primary" href="#kontakt">
@@ -27,14 +26,17 @@ export function Hero() {
           </div>
           <div className="hero__portrait-wrap">
             {portraitOk ? (
-              <img
-                className="hero__portrait"
-                src={hero.portraitSrc}
-                alt={hero.portraitAlt}
-                width={320}
-                height={400}
-                onError={() => setPortraitOk(false)}
-              />
+              <figure className="hero__portrait-frame">
+                <img
+                  className="hero__portrait"
+                  src={hero.portraitSrc}
+                  alt={hero.portraitAlt}
+                  width={960}
+                  height={1280}
+                  decoding="async"
+                  onError={() => setPortraitOk(false)}
+                />
+              </figure>
             ) : (
               <div className="hero__portrait-placeholder" aria-hidden="true">
                 DE

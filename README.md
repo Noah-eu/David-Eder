@@ -30,7 +30,7 @@ npm run preview
 Veškeré texty, SEO metadata a kontaktní údaje jsou v jednom souboru:
 
 - `src/content/siteData.ts` — copy, navigace, sekce, `seo` (title, description, Open Graph)
-- Před ostrým nasazením nahraďte **`TODO_EMAIL`**, **`TODO_PHONE`** a **`TODO_LINKEDIN`** skutečnými hodnotami (včetně plné URL u LinkedIn).
+- E-mail a telefon jsou v `siteData.ts` nastavené; **`TODO_LINKEDIN`** nahraďte plnou URL profilu, až ji budete chtít zveřejnit.
 
 Meta tagy v HTML se při buildu doplňují z `seo` v `siteData.ts` přes Vite plugin v `vite.config.ts`.
 

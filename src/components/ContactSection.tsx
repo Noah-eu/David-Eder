@@ -24,16 +24,16 @@ export function ContactSection() {
             <div className="contact-row">
               <dt>{contact.emailLabel}</dt>
               <dd>
-                <a href={mailto}>
-                  <span className="contact-placeholder">{contact.email}</span>
+                <a className="contact-link" href={mailto}>
+                  {contact.email}
                 </a>
               </dd>
             </div>
             <div className="contact-row">
               <dt>{contact.phoneLabel}</dt>
               <dd>
-                <a href={`tel:${telHref}`}>
-                  <span className="contact-placeholder">{contact.phone}</span>
+                <a className="contact-link" href={`tel:${telHref}`}>
+                  {contact.phone}
                 </a>
               </dd>
             </div>

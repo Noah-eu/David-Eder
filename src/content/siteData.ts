@@ -2,7 +2,7 @@
  * Veškeré texty a kontaktní údaje webu — jediné místo pro úpravy copy.
  * Pro rozšíření o EN přidejte např. siteDataEn a přepínač locale.
  *
- * TODO: Nahraďte placeholdery TODO_EMAIL, TODO_PHONE, TODO_LINKEDIN před ostrým nasazením.
+ * LinkedIn: dokud nemáte URL, nechte TODO_LINKEDIN — zobrazí se jako text k doplnění.
  */
 
 export const seo = {
@@ -36,6 +36,8 @@ export const siteData = {
 
   hero: {
     id: 'uvod',
+    /** Technický „eyebrow“ — naznačuje propojené procesy, ne marketing. */
+    automationStrip: 'Rezervace · úklid · host — provoz jako propojený systém',
     headline:
       'Automatizace a optimalizace provozu malých hotelů a apartmánových domů',
     subheadline:
@@ -192,11 +194,9 @@ export const siteData = {
 
   contact: {
     id: 'kontakt',
-    /** Nahraďte skutečným e-mailem */
-    email: 'TODO_EMAIL',
-    /** Nahraďte včetně předvolby, např. +420 … */
-    phone: 'TODO_PHONE',
-    /** Nahraďte celou URL profilu, např. https://www.linkedin.com/in/… */
+    email: 'david.eder78@gmail.com',
+    phone: '+420 733 439 733',
+    /** Celá URL profilu, např. https://www.linkedin.com/in/… */
     linkedinUrl: 'TODO_LINKEDIN',
     title: 'Kontakt',
     headline: 'Chcete zjednodušit provoz vašeho ubytování?',

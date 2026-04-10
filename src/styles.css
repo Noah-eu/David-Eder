@@ -1,21 +1,22 @@
-/* David Eder — landing. Mobile-first, klidná paleta, bez přehnaných efektů. */
+/* David Eder — klidná, „provozní“ estetika: čitelnost, mřížka, typografie s nádechem systémů. */
 
 :root {
-  --color-bg: #f8f7f5;
+  --color-bg: #eef1f3;
   --color-surface: #ffffff;
-  --color-text: #2c3338;
-  --color-text-muted: #5c656c;
-  --color-border: #e4e2de;
-  --color-accent: #1e4d5c;
-  --color-accent-hover: #163a46;
-  --color-accent-soft: rgba(30, 77, 92, 0.08);
-  --shadow-sm: 0 1px 2px rgba(44, 51, 56, 0.06);
-  --shadow-md: 0 8px 24px rgba(44, 51, 56, 0.08);
-  --radius: 12px;
-  --radius-sm: 8px;
-  --font-sans: Georgia, 'Times New Roman', serif;
-  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    sans-serif;
+  --color-text: #1a2228;
+  --color-text-muted: #4a5560;
+  --color-border: #d5dce2;
+  --color-accent: #0d4f5c;
+  --color-accent-hover: #093c46;
+  --color-accent-soft: rgba(13, 79, 92, 0.09);
+  --color-grid: rgba(13, 79, 92, 0.06);
+  --shadow-sm: 0 1px 0 rgba(26, 34, 40, 0.06);
+  --shadow-md: 0 12px 40px rgba(26, 34, 40, 0.07);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --font-sans: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-ui: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --header-h: 4.25rem;
   --content-max: 68rem;
 }
@@ -110,8 +111,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(248, 247, 245, 0.92);
-  backdrop-filter: blur(10px);
+  background: rgba(238, 241, 243, 0.88);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -242,8 +243,27 @@ a:hover {
 
 /* Hero */
 .hero {
+  position: relative;
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -1px -1px;
+  mask-image: linear-gradient(180deg, #000 0%, #000 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero .section__inner {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -251,6 +271,22 @@ a:hover {
     padding-top: 3rem;
     padding-bottom: 4.5rem;
   }
+}
+
+.hero__strip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  max-width: 36rem;
+}
+
+.hero__sub.section__intro {
+  margin-bottom: 1rem;
 }
 
 .hero__grid {
@@ -261,7 +297,7 @@ a:hover {
 
 @media (min-width: 900px) {
   .hero__grid {
-    grid-template-columns: 1fr minmax(220px, 320px);
+    grid-template-columns: 1fr minmax(260px, 360px);
     gap: 3rem;
   }
 }
@@ -269,10 +305,10 @@ a:hover {
 .hero__trust {
   font-size: 0.95rem;
   color: var(--color-text-muted);
-  font-style: italic;
   margin: 1.25rem 0 1.75rem;
   padding-left: 1rem;
-  border-left: 3px solid var(--color-accent);
+  border-left: 2px solid var(--color-accent);
+  max-width: 40rem;
 }
 
 .hero__actions {
@@ -291,20 +327,34 @@ a:hover {
   }
 }
 
-.hero__portrait {
-  width: min(100%, 280px);
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+/* Fotka celá v rámečku — žádný ořez „cover“ u hlavy. */
+.hero__portrait-frame {
+  margin: 0;
+  max-width: min(100%, 320px);
+  padding: 0.4rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
+}
+
+.hero__portrait {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: min(72vh, 440px);
+  object-fit: contain;
+  object-position: center top;
+  border-radius: var(--radius-sm);
 }
 
 .hero__portrait-placeholder {
   width: min(100%, 280px);
+  min-height: 200px;
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
-  background: linear-gradient(145deg, var(--color-accent-soft), var(--color-border));
+  background: var(--color-accent-soft);
   border: 1px dashed var(--color-border);
   display: flex;
   align-items: center;
@@ -313,7 +363,6 @@ a:hover {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--color-accent);
-  opacity: 0.85;
 }
 
 /* Cards grid */
@@ -340,12 +389,12 @@ a:hover {
   border-radius: var(--radius);
   padding: 1.35rem 1.35rem 1.15rem;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
+  border-color: rgba(13, 79, 92, 0.22);
   box-shadow: var(--shadow-md);
-  border-color: rgba(30, 77, 92, 0.15);
 }
 
 .card p {
@@ -356,7 +405,20 @@ a:hover {
 }
 
 .card h3 {
-  color: var(--color-accent);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.card h3::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: var(--color-accent);
+  margin-bottom: 0.5rem;
+  opacity: 0.65;
 }
 
 /* Audience */
@@ -419,9 +481,9 @@ a:hover {
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
   background: var(--color-accent);
 }
 
@@ -431,7 +493,7 @@ a:hover {
   padding: 1.25rem 1.35rem;
   background: var(--color-accent-soft);
   border-radius: var(--radius);
-  border: 1px solid rgba(30, 77, 92, 0.12);
+  border: 1px solid rgba(13, 79, 92, 0.14);
 }
 
 .about__proof h3 {
@@ -478,6 +540,11 @@ a:hover {
   box-shadow: var(--shadow-sm);
 }
 
+.step h3 {
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+}
+
 .step::before {
   counter-increment: step;
   content: counter(step);
@@ -486,12 +553,12 @@ a:hover {
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   background: var(--color-accent);
   color: #fff;
-  font-family: var(--font-ui);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.8rem;
   margin-bottom: 0.85rem;
 }
 
@@ -609,16 +676,29 @@ a:hover {
   font-family: var(--font-ui);
 }
 
+.contact-link {
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(13, 79, 92, 0.35);
+  text-underline-offset: 0.2em;
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
 .contact-placeholder {
-  font-family: ui-monospace, monospace;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
   color: var(--color-accent);
 }
 
 /* Footer */
 .site-footer {
   padding: 2.5rem 1.25rem;
-  background: #eef0f1;
+  background: #e8ecef;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
   font-size: 0.9rem;
