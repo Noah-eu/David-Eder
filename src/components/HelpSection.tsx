@@ -12,7 +12,7 @@ export function HelpSection() {
         <p className="section__intro">{help.intro}</p>
         <div className="cards-grid cards-grid--2 cards-grid--3">
           {help.cards.map((card) => (
-            <article key={card.title} className="card">
+            <article key={card.title} className="card card--service">
               <h3>{card.title}</h3>
               <p>{card.body}</p>
             </article>

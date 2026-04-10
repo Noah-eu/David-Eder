@@ -4,7 +4,7 @@ export function PackagesSection() {
   const { packages } = siteData
 
   return (
-    <section className="section" id={packages.id} aria-labelledby="packages-title">
+    <section className="section section--alt" id={packages.id} aria-labelledby="packages-title">
       <div className="section__inner">
         <h2 className="section__title" id="packages-title">
           {packages.title}

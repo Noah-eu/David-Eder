@@ -6,19 +6,31 @@ function isHttpUrl(s: string): boolean {
 
 export function ContactSection() {
   const { contact, domain } = siteData
-  const mailto = `mailto:${contact.email}?subject=Konzultace%20%E2%80%94%20provoz%20ubytov%C3%A1n%C3%AD`
+  const mailto = `mailto:${contact.email}?subject=${encodeURIComponent('Dotaz na spolupráci')}`
   const telHref = contact.phone.replace(/\s/g, '')
   const linkedinOk = isHttpUrl(contact.linkedinUrl)
 
   return (
     <section className="section contact-section" id={contact.id} aria-labelledby="contact-title">
-      <div className="section__inner">
-        <h2 className="section__title" id="contact-title">
-          {contact.title}
-        </h2>
+      <div className="section__inner contact-layout">
+        <div>
+          <h2 className="section__title" id="contact-title">
+            {contact.title}
+          </h2>
+          <p className="section__intro contact-section__lead">{contact.body}</p>
+        </div>
         <div className="contact-box">
-          <h3 style={{ marginTop: 0, fontSize: '1.35rem' }}>{contact.headline}</h3>
-          <p style={{ marginBottom: 0, color: 'var(--color-text-muted)' }}>{contact.body}</p>
+          <h3 className="contact-box__title">{contact.headline}</h3>
+          <p className="contact-box__lead">{contact.contactLead}</p>
+
+          <div className="contact-actions">
+            <a className="btn btn--primary btn--lg" href={mailto}>
+              {contact.btnEmail}
+            </a>
+            <a className="btn btn--outline-light btn--lg" href={`tel:${telHref}`}>
+              {contact.btnCall}
+            </a>
+          </div>
 
           <dl className="contact-rows">
             <div className="contact-row">
@@ -41,7 +53,7 @@ export function ContactSection() {
               <dt>{contact.linkedinLabel}</dt>
               <dd>
                 {linkedinOk ? (
-                  <a href={contact.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                  <a className="contact-link" href={contact.linkedinUrl} target="_blank" rel="noopener noreferrer">
                     Profil na LinkedIn
                   </a>
                 ) : (
@@ -51,10 +63,7 @@ export function ContactSection() {
             </div>
           </dl>
 
-          <a className="btn btn--primary" href={mailto}>
-            {contact.openEmail}
-          </a>
-          <p style={{ marginTop: '1rem', marginBottom: 0, fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
+          <p className="contact-meta">
             Web:{' '}
             <a href={`https://${domain}`}>{domain}</a>
           </p>

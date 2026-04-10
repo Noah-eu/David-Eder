@@ -1,6 +1,8 @@
-# David Eder — osobní web (davideder.eu)
+# David Eder | osobní web (davideder.eu)
 
 Jednostránkový prezentační web: automatizace a optimalizace provozu malých hotelů a apartmánových domů. Postaveno na **Vite**, **React** a **TypeScript**, bez backendu a CMS.
+
+Vizuál: **tmavý kontrastní režim**, teplý oranžový akcent, výrazná display typografie (**Syne** + **DM Sans**), hero s fotkou před barevným kruhem. Inspirace odpovídá běžným vzorům moderních osobních / creative portfolio webů (silná typografie, málo dekorativního šumu, jasné CTA).
 
 ## Lokální vývoj
 

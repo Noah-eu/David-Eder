@@ -4,11 +4,7 @@ export function ApproachSection() {
   const { approach } = siteData
 
   return (
-    <section
-      className="section benefits-band"
-      id={approach.id}
-      aria-labelledby="approach-title"
-    >
+    <section className="section" id={approach.id} aria-labelledby="approach-title">
       <div className="section__inner">
         <h2 className="section__title" id="approach-title">
           {approach.title}

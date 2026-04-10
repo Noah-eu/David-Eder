@@ -4,12 +4,7 @@ export function AudienceSection() {
   const { audience } = siteData
 
   return (
-    <section
-      className="section"
-      style={{ background: 'var(--color-surface)' }}
-      id={audience.id}
-      aria-labelledby="audience-title"
-    >
+    <section className="section section--alt" id={audience.id} aria-labelledby="audience-title">
       <div className="section__inner">
         <h2 className="section__title" id="audience-title">
           {audience.title}
