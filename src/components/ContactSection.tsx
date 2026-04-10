@@ -1,14 +1,9 @@
 import { siteData } from '../content/siteData'
 
-function isHttpUrl(s: string): boolean {
-  return s.startsWith('http://') || s.startsWith('https://')
-}
-
 export function ContactSection() {
   const { contact, domain } = siteData
   const mailto = `mailto:${contact.email}?subject=${encodeURIComponent('Dotaz na spolupráci')}`
   const telHref = contact.phone.replace(/\s/g, '')
-  const linkedinOk = isHttpUrl(contact.linkedinUrl)
 
   return (
     <section className="section contact-section" id={contact.id} aria-labelledby="contact-title">
@@ -47,18 +42,6 @@ export function ContactSection() {
                 <a className="contact-link" href={`tel:${telHref}`}>
                   {contact.phone}
                 </a>
-              </dd>
-            </div>
-            <div className="contact-row">
-              <dt>{contact.linkedinLabel}</dt>
-              <dd>
-                {linkedinOk ? (
-                  <a className="contact-link" href={contact.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                    Profil na LinkedIn
-                  </a>
-                ) : (
-                  <span className="contact-placeholder">{contact.linkedinUrl}</span>
-                )}
               </dd>
             </div>
           </dl>

@@ -719,11 +719,6 @@ a:hover {
   border-bottom-color: var(--accent-hover);
 }
 
-.contact-placeholder {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
 .contact-actions {
   display: flex;
   flex-wrap: wrap;

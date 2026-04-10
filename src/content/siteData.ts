@@ -2,7 +2,6 @@
  * Veškeré texty a kontaktní údaje webu — jediné místo pro úpravy copy.
  * Pro rozšíření o EN přidejte např. siteDataEn a přepínač locale.
  *
- * LinkedIn: dokud nemáte URL, nechte TODO_LINKEDIN — zobrazí se jako text k doplnění.
  */
 
 export const seo = {
@@ -193,15 +192,12 @@ export const siteData = {
     id: 'kontakt',
     email: 'david.eder78@gmail.com',
     phone: '+420 733 439 733',
-    /** Celá URL profilu, např. https://www.linkedin.com/in/… */
-    linkedinUrl: 'TODO_LINKEDIN',
     title: 'Kontakt',
     headline: 'Chcete zjednodušit provoz vašeho ubytování?',
     body:
       'Napište mi, podíváme se, kde má váš provoz největší prostor pro zlepšení. Krátká zpráva stačí, ozvu se s návrhem dalšího kroku.',
     emailLabel: 'E-mail',
     phoneLabel: 'Telefon',
-    linkedinLabel: 'LinkedIn',
     btnEmail: 'Napsat e-mail',
     btnCall: 'Zavolat',
     contactLead: 'Stačí krátká zpráva nebo telefonát.',
