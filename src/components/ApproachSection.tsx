@@ -14,18 +14,11 @@ export function ApproachSection() {
           {approach.title}
         </h2>
         <p className="section__intro">{approach.intro}</p>
-        <div className="approach-grid">
-          {approach.no.map((item) => (
-            <div key={item.label} className="approach-no">
-              <strong>{item.label}</strong>
-              <p>{item.text}</p>
-            </div>
+        <ul className="approach-principles">
+          {approach.principles.map((text, index) => (
+            <li key={index}>{text}</li>
           ))}
-          <div className="approach-yes">
-            <strong>{approach.yes.label}</strong>
-            <p>{approach.yes.text}</p>
-          </div>
-        </div>
+        </ul>
       </div>
     </section>
   )

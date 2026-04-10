@@ -12,7 +12,7 @@ export const seo = {
     'Pomáhám malým hotelům, aparthotelům a apartmánovým domům zjednodušit provoz, nastavit automatizaci a praktické procesy. Zkušenost z reálného provozu v Praze.',
   ogTitle: 'David Eder — provoz malých hotelů bez zbytečného chaosu',
   ogDescription:
-    'Automatizace, self check-in, housekeeping, komunikace s hosty. Praktická pomoc z praxe, ne z prezentací.',
+    'Automatizace, self check-in, housekeeping, komunikace s hosty. Praktická pomoc z provozu malého ubytování.',
   ogLocale: 'cs_CZ',
 } as const
 
@@ -36,7 +36,6 @@ export const siteData = {
 
   hero: {
     id: 'uvod',
-    /** Technický „eyebrow“ — naznačuje propojené procesy, ne marketing. */
     automationStrip: 'Rezervace · úklid · host — provoz jako propojený systém',
     headline:
       'Automatizace a optimalizace provozu malých hotelů a apartmánových domů',
@@ -59,7 +58,7 @@ export const siteData = {
       {
         title: 'Automatizace provozu',
         body:
-          'Propojím opakující se úkoly tak, aby nevisely na jedné hlavě a nepadaly při každé výjimce. Jde o to, co skutečně děláte každý den — ne o složité systémy naslepo.',
+          'Propojím opakující se úkoly tak, aby se rozumně předávaly v týmu a zvládaly i výjimky. Vycházím z toho, co děláte každý den, a z toho, co už v provozu máte.',
       },
       {
         title: 'Self check-in / self check-out',
@@ -93,7 +92,7 @@ export const siteData = {
     id: 'pro-koho',
     title: 'Pro koho to je',
     intro:
-      'Spolupráce dává největší smysl tam, kde už víte, že „tak nějak to držíme“ nestačí — a nechcete přitom megasystém z katalogu.',
+      'Nejvíc to dává smysl tam, kde provoz už přerostl improvizaci a chcete ho držet při zemi — srozumitelně a bez zbytečné administrativy.',
     items: [
       { title: 'Malé hotely', hint: 'Provozy, kde každý člověk dělá víc věcí najednou.' },
       { title: 'Butik hotely', hint: 'Kde záleží na detailu, ale rutina nesmí brzdit osobní přístup.' },
@@ -101,7 +100,7 @@ export const siteData = {
       { title: 'Apartmánové domy', hint: 'Od rezervací po úklid — potřebujete přehled bez druhé „hlavní“ kanceláře.' },
       {
         title: 'Provozy bez zbytečné složitosti',
-        hint: 'Chcete fungovat lépe — ne koupit deset let implementovaný software, který nikdo nepoužívá.',
+        hint: 'Chcete věci zjednodušit tak, aby je lidé opravdu používali v každodenním provozu.',
       },
     ],
   },
@@ -109,7 +108,7 @@ export const siteData = {
   benefits: {
     id: 'co-prinesu',
     title: 'Co umím přinést',
-    intro: 'Výsledky nejsou heslo v prezentaci — jsou to každodenní změny v provozu.',
+    intro: 'Typicky jde o úpravy v každodenním chodu — viditelné v práci recepce, úklidu i komunikaci s hosty.',
     items: [
       'Méně ruční práce a opakujících se úkonů',
       'Přehlednější každodenní provoz a předávky',
@@ -125,12 +124,12 @@ export const siteData = {
     title: 'O mně',
     paragraphs: [
       'Jmenuji se David Eder. Už přibližně 9 let řídím provoz malého aparthotelu v Praze. Mám zkušenost s každodenním chodem ubytovacího zařízení — od cenotvorby a organizace provozu až po automatizaci služeb, komunikaci s hosty, úklid, technické záležitosti a dodavatele.',
-      'Neřeším teorii do šuplíku. Hledám praktická řešení, která se dají opravdu zavést a která šetří čas, energii i peníze.',
+      'Hledám řešení, která jdou zavést v běžném provozu a která šetří čas, energii i peníze.',
     ],
     proofPoints: [
       '9 let praxe v provozu ubytování',
       'Zkušenost s automatizací check-inu a komunikace s hosty',
-      'Pohled z reálného malého provozu, ne z učebnice',
+      'Návyk z malého aparthotelu — stejné tlaky na kapacitu a kvalitu jako u vás',
       'Důraz na jednoduchost, funkčnost a dlouhodobou udržitelnost',
     ],
   },
@@ -145,11 +144,11 @@ export const siteData = {
       },
       {
         title: 'Slabá místa a návrh řešení',
-        text: 'Společně projdeme procesy a priority. Dostanete konkrétní návrh kroků — ne obecné slidové doporučení.',
+        text: 'Společně projdeme procesy a priority. Dostanete návrh kroků, které jdou rovnou zkusit v provozu.',
       },
       {
         title: 'Praktické zavedení',
-        text: 'Nastavíme změny tak, aby je váš tým zvládl a aby držely i po sezóně. Jde o provoz, ne o jednorázový projekt v PowerPointu.',
+        text: 'Nastavíme změny tak, aby je váš tým zvládl a aby držely i po sezóně. Důležité je, aby fungovaly i v běžném týdnu mimo špičku.',
       },
     ],
   },
@@ -172,24 +171,21 @@ export const siteData = {
       {
         title: 'Dlouhodobá externí provozní podpora',
         description:
-          'Pravidelná spolupráce: konzultace, doladění procesů, reakce na sezónní výkyvy. Jako externí provozní „záda“, ne jako další vrstva managementu.',
+          'Pravidelná spolupráce: konzultace, doladění procesů, reakce na sezónní výkyvy. Spíš opora při rozhodnutích v provozu než formální řízení zvenku.',
       },
     ],
   },
 
   approach: {
     id: 'proc-tento-pristup',
-    title: 'Proč právě tento přístup',
-    intro: 'Malý hotel potřebuje funkční provoz — ne prezentaci pro investory.',
-    no: [
-      { label: 'Ne teorie', text: 'Žádné obecné rady, které nejdou přenést do reálného počtu pokojů a lidí.' },
-      { label: 'Ne složitost pro složitost', text: 'Systém má sloužit provozu — ne obráceně.' },
-      { label: 'Ne obří consulting decky', text: 'Dostanete srozumitelné kroky, které můžete hned začít dělat.' },
+    title: 'Jak pracuji',
+    intro:
+      'Vycházím z provozu malého ubytování: beru v úvahu počet lidí, sezónu a to, co od vás host čeká v praxi.',
+    principles: [
+      'Navrhuju kroky tak, aby šly začít postupně s tím, co už v provozu máte.',
+      'Nástroje a postupy vybírám podle toho, jestli v nich váš tým opravdu bude fungovat.',
+      'Držím se jedné věci: ať je provoz přehlednější a méně vyčerpávající pro lidi, kteří ho denně táhnou.',
     ],
-    yes: {
-      label: 'Ano praxe',
-      text: 'Praktická řešení, která jdou skutečně zavést v malém provozu — protože taková řešení sama používám.',
-    },
   },
 
   contact: {
