@@ -377,7 +377,7 @@ a:hover {
   --hero-glow-d: min(88vw, 640px);
   width: var(--hero-glow-d);
   height: var(--hero-glow-d);
-  left: calc(50% + clamp(2.25rem, 16vw, 9.5rem));
+  left: calc(50% + clamp(4.5rem, 32vw, 19rem));
   top: 56%;
   right: auto;
   transform: translate(-50%, -42%);
@@ -385,7 +385,7 @@ a:hover {
 
 @media (max-width: 959px) {
   .hero__portrait-glow {
-    left: calc(50% + clamp(1.25rem, 10vw, 5rem));
+    left: calc(50% + clamp(2.5rem, 20vw, 10rem));
     top: 58%;
     transform: translate(-50%, -40%);
   }
