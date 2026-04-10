@@ -25,29 +25,24 @@ export function Hero() {
             </div>
           </div>
           <div className="hero__portrait-wrap">
+            <div className="hero__portrait-glow" aria-hidden="true" />
             <div className="hero__portrait-stage">
               {portraitOk ? (
-                <>
-                  <div className="hero__portrait-glow" aria-hidden="true" />
-                  <figure className="hero__portrait-frame">
-                    <img
-                      className="hero__portrait"
-                      src={hero.portraitSrc}
-                      alt={hero.portraitAlt}
-                      width={960}
-                      height={1280}
-                      decoding="async"
-                      onError={() => setPortraitOk(false)}
-                    />
-                  </figure>
-                </>
+                <figure className="hero__portrait-frame">
+                  <img
+                    className="hero__portrait"
+                    src={hero.portraitSrc}
+                    alt={hero.portraitAlt}
+                    width={960}
+                    height={1280}
+                    decoding="async"
+                    onError={() => setPortraitOk(false)}
+                  />
+                </figure>
               ) : (
-                <>
-                  <div className="hero__portrait-glow" aria-hidden="true" />
-                  <div className="hero__portrait-placeholder" aria-hidden="true">
-                    DE
-                  </div>
-                </>
+                <div className="hero__portrait-placeholder" aria-hidden="true">
+                  DE
+                </div>
               )}
             </div>
           </div>

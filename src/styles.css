@@ -32,6 +32,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 1rem);
+  overflow-x: hidden;
 }
 
 body {
@@ -339,35 +340,53 @@ a:hover {
 }
 
 .hero__portrait-wrap {
+  position: relative;
   justify-self: center;
+  overflow: visible;
+  z-index: 0;
 }
 
 @media (min-width: 960px) {
   .hero__portrait-wrap {
     justify-self: end;
+    margin-right: clamp(0px, 2vw, 1.5rem);
   }
 }
 
 .hero__portrait-stage {
   position: relative;
+  z-index: 1;
   width: fit-content;
   max-width: min(100%, 360px);
   margin: 0 auto;
 }
 
+/* ~6× větší kruh, posun vpravo (cca 1/3 disku mimo obrazovku), výš — fotka sedí jen na „levé“ části disku */
 .hero__portrait-glow {
   position: absolute;
-  width: min(88vw, 320px);
-  height: min(88vw, 320px);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #fb923c 0%, var(--accent) 42%, var(--accent-dark) 100%);
-  opacity: 0.88;
   z-index: 0;
   pointer-events: none;
   filter: blur(0.5px);
+  opacity: 0.9;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fb923c 0%, var(--accent) 38%, var(--accent-dark) 100%);
+  --hero-glow-d: clamp(1320px, 132vw, 2280px);
+  width: var(--hero-glow-d);
+  height: var(--hero-glow-d);
+  top: 24%;
+  right: calc(-1 * var(--hero-glow-d) / 3);
+  left: auto;
+  /* Záporné X: víc disku zůstane „pod“ levou polovinou fotky; kladné by ho posouvalo doprava mimo obličej */
+  transform: translate(calc(-11% - 0.5rem), -58%);
+}
+
+@media (max-width: 959px) {
+  .hero__portrait-glow {
+    --hero-glow-d: clamp(780px, 195vw, 1320px);
+    top: 32%;
+    right: calc(-1 * var(--hero-glow-d) / 3.5);
+    transform: translate(calc(-8% - 0.25rem), -54%);
+  }
 }
 
 .hero__portrait-frame {
