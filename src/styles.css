@@ -312,6 +312,11 @@ a:hover {
   align-items: center;
 }
 
+.hero__copy {
+  position: relative;
+  z-index: 2;
+}
+
 @media (min-width: 960px) {
   .hero__grid {
     grid-template-columns: 1fr minmax(280px, 400px);
@@ -360,22 +365,30 @@ a:hover {
   margin: 0 auto;
 }
 
-/* 2× oproti původnímu (~320px → ~640px), vycentrováno za portrétem; jas z druhé strany disku (vpravo) */
+/* 2× původní velikost; posun vpravo a níž — pod spodní částí fotky, část disku mimo obrazovku, slabší „rameno“ doleva ke sloupci s textem */
 .hero__portrait-glow {
   position: absolute;
   z-index: 0;
   pointer-events: none;
   filter: blur(0.5px);
-  opacity: 0.88;
+  opacity: 0.85;
   border-radius: 50%;
-  background: radial-gradient(circle at 68% 32%, #fb923c 0%, var(--accent) 40%, var(--accent-dark) 100%);
+  background: radial-gradient(circle at 78% 38%, #fb923c 0%, var(--accent) 36%, var(--accent-dark) 72%);
   --hero-glow-d: min(88vw, 640px);
   width: var(--hero-glow-d);
   height: var(--hero-glow-d);
-  left: 50%;
-  top: 44%;
+  left: calc(50% + clamp(2.25rem, 16vw, 9.5rem));
+  top: 56%;
   right: auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -42%);
+}
+
+@media (max-width: 959px) {
+  .hero__portrait-glow {
+    left: calc(50% + clamp(1.25rem, 10vw, 5rem));
+    top: 58%;
+    transform: translate(-50%, -40%);
+  }
 }
 
 .hero__portrait-frame {
