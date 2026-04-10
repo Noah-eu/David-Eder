@@ -349,9 +349,6 @@ a:hover {
   justify-self: center;
   overflow: visible;
   z-index: 0;
-  /* Posun kruhu vůči šířce fotky, ne vůči celému viewportu (na PC dřív rozbíjelo obří vw) */
-  container-type: inline-size;
-  container-name: hero-portrait;
 }
 
 @media (min-width: 960px) {
@@ -362,13 +359,13 @@ a:hover {
 
 .hero__portrait-stage {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: fit-content;
   max-width: min(100%, 360px);
   margin: 0 auto;
 }
 
-/* 2× původní velikost; posun vpravo a níž — stejná logika na mobilu i PC (offset z šířky rámu fotky, ne vw) */
+/* Kruh za fotkou: % a rem jsou vždy vůči šířce .hero__portrait-wrap (sloupec s fotkou), ne vůči viewportu — žádné cqi/container-type */
 .hero__portrait-glow {
   position: absolute;
   z-index: 0;
@@ -380,23 +377,16 @@ a:hover {
   --hero-glow-d: min(88vw, 640px);
   width: var(--hero-glow-d);
   height: var(--hero-glow-d);
-  left: calc(50% + min(10.5rem, 42cqi));
+  left: calc(50% + min(6.5rem, 36%));
   top: 56%;
   right: auto;
   transform: translate(-50%, -42%);
 }
 
-@supports not (width: 1cqi) {
-  .hero__portrait-glow {
-    left: calc(50% + clamp(3.5rem, 14vw, 10rem));
-    top: 57%;
-    transform: translate(-50%, -41%);
-  }
-}
-
 .hero__portrait-frame {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   margin: 0;
   padding: 0.35rem;
   background: var(--bg-card);
