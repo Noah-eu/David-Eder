@@ -431,6 +431,18 @@ a:hover {
   color: var(--accent);
 }
 
+/* S čím pomáhám — zvýraznění části úvodu kvůli čitelnosti u přesahu hero kruhu */
+.help-section {
+  position: relative;
+  z-index: 1;
+}
+
+.help-section__intro-highlight {
+  color: #f8fafc;
+  font-weight: 600;
+  text-shadow: 0 0 24px rgba(12, 16, 23, 0.85), 0 1px 3px rgba(12, 16, 23, 0.95);
+}
+
 /* Cards */
 .cards-grid {
   display: grid;
