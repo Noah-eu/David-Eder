@@ -39,8 +39,7 @@ export const siteData = {
       'Automatizace a optimalizace provozu malých hotelů a apartmánových domů',
     subheadline:
       'Pomáhám ubytovacím zařízením zjednodušit provoz, snížit zbytečné náklady a nastavit systém, který funguje lépe pro majitele, zaměstnance i hosty.',
-    trustLine:
-      'Devět let denně v provozu aparthotelu v Praze. Řeším věci, které majitelům a týmům reálně šetří čas a nervy.',
+    trustLine: 'Desítky let zkušeností z hotelnictví v Praze i zahraničí.',
     ctaConsult: 'Domluvit konzultaci',
     ctaEmail: 'Napsat e-mail',
     portraitAlt: 'David Eder',
