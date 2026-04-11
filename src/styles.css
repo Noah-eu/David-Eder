@@ -462,16 +462,32 @@ a:hover {
   color: var(--accent);
 }
 
-/* S čím pomáhám — celý úvod světlý kvůli čitelnosti u přesahu hero kruhu */
+/* S čím vám můžu pomoct — chipy, přesah hero kruhu */
 .help-section {
   position: relative;
   z-index: 1;
 }
 
-.help-section__intro {
-  color: #f8fafc;
-  font-weight: 500;
-  text-shadow: 0 0 24px rgba(12, 16, 23, 0.85), 0 1px 3px rgba(12, 16, 23, 0.95);
+.help-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 52rem;
+}
+
+.help-chips__item {
+  margin: 0;
+  padding: 0.5rem 1.05rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--accent-hover);
+  background: var(--accent-soft);
+  border: 1px solid rgba(234, 88, 12, 0.35);
+  border-radius: var(--radius-pill);
 }
 
 /* Cards */
@@ -511,14 +527,6 @@ a:hover {
   color: var(--text-muted);
   font-size: 0.98rem;
   line-height: 1.58;
-}
-
-.card--service h3 {
-  color: var(--accent-hover);
-  font-family: var(--font-display);
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-bottom: 0.65rem;
 }
 
 .audience-card h3 {

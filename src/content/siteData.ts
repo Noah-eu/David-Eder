@@ -11,7 +11,7 @@ export const seo = {
     'Pomáhám malým hotelům, aparthotelům a apartmánovým domům zjednodušit provoz, nastavit automatizaci a praktické procesy. Zkušenost z reálného provozu v Praze.',
   ogTitle: 'David Eder | provoz malých hotelů bez zbytečného chaosu',
   ogDescription:
-    'Automatizace, self check-in, housekeeping, komunikace s hosty. Praktická pomoc z provozu malého ubytování.',
+    'Automatizace, self check-in, komunikace s hosty, optimalizace nákladů. Praktická pomoc z provozu malého ubytování.',
   ogLocale: 'cs_CZ',
 } as const
 
@@ -25,7 +25,7 @@ export const siteData = {
     ctaContact: 'Kontakt',
     nav: [
       { id: 'nav-uvod', href: '#uvod', label: 'Úvod' },
-      { id: 'nav-pomoc', href: '#s-cim-pomaham', label: 'S čím pomáhám' },
+      { id: 'nav-pomoc', href: '#s-cim-pomaham', label: 'S čím vám můžu pomoct.' },
       { id: 'nav-koho', href: '#pro-koho', label: 'Pro koho' },
       { id: 'nav-sluzby', href: '#sluzby', label: 'Služby' },
       { id: 'nav-kontakt', href: '#kontakt', label: 'Kontakt' },
@@ -48,40 +48,12 @@ export const siteData = {
 
   help: {
     id: 's-cim-pomaham',
-    title: 'S čím pomáhám',
-    intro:
-      'Konkrétní oblasti, kde malý provoz nejvíc ztrácí čas. Tam se typicky dá rozumně ušetřit energii i peníze.',
-    cards: [
-      {
-        title: 'Automatizace provozu',
-        body:
-          'Propojím opakující se úkoly tak, aby se rozumně předávaly v týmu a zvládaly i výjimky. Vycházím z toho, co děláte každý den, a z toho, co už v provozu máte.',
-      },
-      {
-        title: 'Self check-in / self check-out',
-        body:
-          'Nastavení příchodů a odchodů hostů tak, aby byly přehledné pro recepci i pro hosta. Méně telefonátů večer, méně čekání u dveří, jasné instrukce místo improvizace.',
-      },
-      {
-        title: 'Housekeeping a provozní reporty',
-        body:
-          'Jednoduché reporty z úklidu a stavu apartmánů, které dávají smysl majiteli i úklidu. Přehled bez zbytečných tabulek a bez toho, aby se informace ztrácely mezi zprávami.',
-      },
-      {
-        title: 'Guest communication a concierge',
-        body:
-          'Sjednocení informací pro hosty před příjezdem, během pobytu i při odjezdu. Méně stejných dotazů, víc klidu na obou stranách.',
-      },
-      {
-        title: 'Optimalizace nákladů a procesů',
-        body:
-          'Projdeme dodavatele, rutiny a místa, kde uniká čas nebo peníze. Hledám úspory, které nejsou na úkor zážitku hosta ani únavy týmu.',
-      },
-      {
-        title: 'Stabilizace provozu',
-        body:
-          'Když je provoz neustále v režimu hašení, nikdo nestíhá rozvíjet nabídku ani kvalitu. Pomůžu srovnat priority a nastavit opakovatelné postupy, které drží směr.',
-      },
+    title: 'S čím vám můžu pomoct.',
+    chips: [
+      'Automatizace provozu',
+      'Nastavení Self check-in / self check-out',
+      'Vytvoření Guest communication a concierge',
+      'Optimalizace nákladů a procesů',
     ],
   },
 
