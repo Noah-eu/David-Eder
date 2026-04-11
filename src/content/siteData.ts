@@ -27,7 +27,6 @@ export const siteData = {
       { id: 'nav-uvod', href: '#uvod', label: 'Úvod' },
       { id: 'nav-pomoc', href: '#s-cim-pomaham', label: 'S čím pomáhám' },
       { id: 'nav-koho', href: '#pro-koho', label: 'Pro koho' },
-      { id: 'nav-o-mne', href: '#o-mne', label: 'O mně' },
       { id: 'nav-sluzby', href: '#sluzby', label: 'Služby' },
       { id: 'nav-kontakt', href: '#kontakt', label: 'Kontakt' },
     ] satisfies NavItem[],
@@ -103,55 +102,6 @@ export const siteData = {
     ],
   },
 
-  benefits: {
-    id: 'co-prinesu',
-    title: 'Co umím přinést',
-    intro:
-      'Typicky jde o úpravy v každodenním chodu, viditelné v práci recepce, úklidu i komunikaci s hosty.',
-    items: [
-      'Méně ruční práce a opakujících se úkonů',
-      'Přehlednější každodenní provoz a předávky',
-      'Lepší předávání úkolů mezi směnami a lidmi',
-      'Méně chyb, výpadků a „nevím, kdo to měl“',
-      'Jednodušší komunikace s hostem bez ztráty úrovně služby',
-      'Menší závislost na neustálém hašení problémů',
-    ],
-  },
-
-  about: {
-    id: 'o-mne',
-    title: 'O mně',
-    paragraphs: [
-      'Jmenuji se David Eder. Už přibližně 9 let řídím provoz malého aparthotelu v Praze. Mám zkušenost s každodenním chodem ubytovacího zařízení: od cenotvorby a organizace provozu až po automatizaci služeb, komunikaci s hosty, úklid, technické záležitosti a dodavatele.',
-      'Hledám řešení, která jdou zavést v běžném provozu a která šetří čas, energii i peníze.',
-    ],
-    proofPoints: [
-      '9 let praxe v provozu ubytování',
-      'Zkušenost s automatizací check-inu a komunikace s hosty',
-      'Návyk z malého aparthotelu, stejné tlaky na kapacitu a kvalitu jako u vás',
-      'Důraz na jednoduchost, funkčnost a dlouhodobou udržitelnost',
-    ],
-  },
-
-  process: {
-    id: 'spoluprace',
-    title: 'Jak probíhá spolupráce',
-    steps: [
-      {
-        title: 'Rychlá úvodní konzultace',
-        text: 'Krátký hovor nebo schůzka: jaký máte provoz, kde vás to nejvíc brzdí a co byste chtěli zlepšit jako první.',
-      },
-      {
-        title: 'Slabá místa a návrh řešení',
-        text: 'Společně projdeme procesy a priority. Dostanete návrh kroků, které jdou rovnou zkusit v provozu.',
-      },
-      {
-        title: 'Praktické zavedení',
-        text: 'Nastavíme změny tak, aby je váš tým zvládl a aby držely i po sezóně. Důležité je, aby fungovaly i v běžném týdnu mimo špičku.',
-      },
-    ],
-  },
-
   packages: {
     id: 'sluzby',
     title: 'Služby a formát spolupráce',
@@ -172,18 +122,6 @@ export const siteData = {
         description:
           'Pravidelná spolupráce: konzultace, doladění procesů, reakce na sezónní výkyvy. Spíš opora při rozhodnutích v provozu než formální řízení zvenku.',
       },
-    ],
-  },
-
-  approach: {
-    id: 'proc-tento-pristup',
-    title: 'Jak pracuji',
-    intro:
-      'Vycházím z provozu malého ubytování: beru v úvahu počet lidí, sezónu a to, co od vás host čeká v praxi.',
-    principles: [
-      'Navrhuju kroky tak, aby šly začít postupně s tím, co už v provozu máte.',
-      'Nástroje a postupy vybírám podle toho, jestli v nich váš tým opravdu bude fungovat.',
-      'Držím se jedné věci: ať je provoz přehlednější a méně vyčerpávající pro lidi, kteří ho denně táhnou.',
     ],
   },
 
