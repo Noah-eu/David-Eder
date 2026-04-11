@@ -9,15 +9,13 @@ export function AudienceSection() {
         <h2 className="section__title" id="audience-title">
           {audience.title}
         </h2>
-        <p className="section__intro">{audience.intro}</p>
-        <div className="audience-grid">
-          {audience.items.map((item) => (
-            <article key={item.title} className="card audience-card">
-              <h3>{item.title}</h3>
-              <p className="card__hint">{item.hint}</p>
-            </article>
+        <ul className="audience-chips" aria-label="Typy provozů">
+          {audience.chips.map((label) => (
+            <li key={label} className="audience-chips__item">
+              {label}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

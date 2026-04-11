@@ -6,18 +6,9 @@ export function ContactSection() {
   const telHref = contact.phone.replace(/\s/g, '')
 
   return (
-    <section className="section contact-section" id={contact.id} aria-labelledby="contact-title">
-      <div className="section__inner contact-layout">
-        <div>
-          <h2 className="section__title" id="contact-title">
-            {contact.title}
-          </h2>
-          <p className="section__intro contact-section__lead">{contact.body}</p>
-        </div>
+    <section className="section contact-section" id={contact.id} aria-label="Kontakt">
+      <div className="section__inner">
         <div className="contact-box">
-          <h3 className="contact-box__title">{contact.headline}</h3>
-          <p className="contact-box__lead">{contact.contactLead}</p>
-
           <div className="contact-actions">
             <a className="btn btn--primary btn--lg" href={mailto}>
               {contact.btnEmail}
@@ -47,8 +38,7 @@ export function ContactSection() {
           </dl>
 
           <p className="contact-meta">
-            Web:{' '}
-            <a href={`https://${domain}`}>{domain}</a>
+            Web: <a href={`https://${domain}`}>{domain}</a>
           </p>
         </div>
       </div>

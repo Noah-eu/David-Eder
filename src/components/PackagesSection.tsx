@@ -9,7 +9,6 @@ export function PackagesSection() {
         <h2 className="section__title" id="packages-title">
           {packages.title}
         </h2>
-        <p className="section__intro">{packages.intro}</p>
         <div className="cards-grid cards-grid--3">
           {packages.items.map((pkg) => (
             <article key={pkg.title} className="card package-card">

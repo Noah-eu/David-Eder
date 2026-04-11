@@ -59,29 +59,17 @@ export const siteData = {
   audience: {
     id: 'pro-koho',
     title: 'Pro koho to je',
-    intro:
-      'Nejvíc to dává smysl tam, kde provoz už přerostl improvizaci a chcete ho držet při zemi: srozumitelně a bez zbytečné administrativy.',
-    items: [
-      { title: 'Malé hotely', hint: 'Provozy, kde každý člověk dělá víc věcí najednou.' },
-      { title: 'Butik hotely', hint: 'Kde záleží na detailu, ale rutina nesmí brzdit osobní přístup.' },
-      { title: 'Aparthotely', hint: 'Více jednotek a předávání informací, typické místo, kde snadno vzniká chaos.' },
-      { title: 'Apartmánové domy', hint: 'Od rezervací po úklid: přehled bez druhé „hlavní“ kanceláře.' },
-      {
-        title: 'Provozy bez zbytečné složitosti',
-        hint: 'Chcete věci zjednodušit tak, aby je lidé opravdu používali v každodenním provozu.',
-      },
-    ],
+    chips: ['Malé hotely', 'Butik hotely', 'Aparthotely'],
   },
 
   packages: {
     id: 'sluzby',
     title: 'Služby a formát spolupráce',
-    intro: 'Vyberte úroveň podle toho, kde právě stojíte, případně se domluvíme na kombinaci.',
     items: [
       {
         title: 'Provozní audit',
         description:
-          'Strukturovaný průlet vaším provozem: rezervace, předání apartmánů, úklid, komunikace, náklady. Výstupem je přehled úzkých míst a jasných priorit.',
+          'Strukturovaný průlet vaším provozem: rezervace, check-in/checkout, úklid, komunikace, náklady.',
       },
       {
         title: 'Návrh optimalizace a automatizace',
@@ -100,15 +88,10 @@ export const siteData = {
     id: 'kontakt',
     email: 'david.eder78@gmail.com',
     phone: '+420 705 940 697',
-    title: 'Kontakt',
-    headline: 'Chcete zjednodušit provoz vašeho ubytování?',
-    body:
-      'Napište mi, podíváme se, kde má váš provoz největší prostor pro zlepšení. Krátká zpráva stačí, ozvu se s návrhem dalšího kroku.',
     emailLabel: 'E-mail',
     phoneLabel: 'Telefon',
     btnEmail: 'Napsat e-mail',
     btnCall: 'Zavolat',
-    contactLead: 'Stačí krátká zpráva nebo telefonát.',
   },
 
   footer: {
