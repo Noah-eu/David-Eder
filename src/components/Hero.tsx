@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import portraitUrl from '../assets/david-eder.png'
 import { siteData } from '../content/siteData'
 
 export function Hero() {
@@ -28,17 +29,17 @@ export function Hero() {
             <div className="hero__portrait-glow" aria-hidden="true" />
             <div className="hero__portrait-stage">
               {portraitOk ? (
-                <figure className="hero__portrait-frame">
+                <div className="hero__portrait-cutout">
                   <img
                     className="hero__portrait"
-                    src={hero.portraitSrc}
+                    src={portraitUrl}
                     alt={hero.portraitAlt}
-                    width={960}
-                    height={1280}
+                    width={1024}
+                    height={1536}
                     decoding="async"
                     onError={() => setPortraitOk(false)}
                   />
-                </figure>
+                </div>
               ) : (
                 <div className="hero__portrait-placeholder" aria-hidden="true">
                   DE

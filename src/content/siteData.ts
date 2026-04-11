@@ -44,7 +44,6 @@ export const siteData = {
       'Devět let denně v provozu aparthotelu v Praze. Řeším věci, které majitelům a týmům reálně šetří čas a nervy.',
     ctaConsult: 'Domluvit konzultaci',
     ctaEmail: 'Napsat e-mail',
-    portraitSrc: '/david-eder.jpg',
     portraitAlt: 'David Eder',
   },
 

@@ -38,7 +38,7 @@ Meta tagy v HTML se při buildu doplňují z `seo` v `siteData.ts` přes Vite pl
 
 ## Portrét
 
-Volitelný soubor **`public/david-eder.jpg`**. Pokud chybí, v hero se zobrazí textové zástupné místo s iniciálami — layout zůstane v pořádku.
+Hero portrét je **`src/assets/david-eder.png`** (PNG s alfou). Při buildu ho Vite vloží do `dist/assets/` s hashem v názvu souboru, takže se po nasazení nepřepíše stará cache z `/david-eder.jpg`. Při chybě načtení se v hero zobrazí zástupné místo s iniciálami.
 
 ## Rozšíření o angličtinu
 
